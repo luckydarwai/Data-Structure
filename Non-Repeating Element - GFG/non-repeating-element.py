@@ -12,12 +12,12 @@ class Solution:
         dic={}
         for i in arr:
             if i not in dic:
-                dic[i]=0
+                dic[i]=1
             else:
                 dic[i]+=1
         # print(dic)
         for i in arr:
-            if dic[i]==0:
+            if dic[i]==1:
                 return i
         return 0
 
