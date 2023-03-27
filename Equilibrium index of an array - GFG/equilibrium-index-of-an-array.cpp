@@ -27,18 +27,22 @@ int main() {
 int findEquilibrium(int A[], int n)
 {
   //Your code here
-  int sum=0,s=0;
+  int leftsum=0,rightsum=0;
   for(int i=0;i<n;i++)
   {
-      sum+=A[i];
+      rightsum+=A[i];
   }
+  
+  
   for(int i=0;i<n;i++)
   {
-      sum-=A[i];
-      if(s==sum){
+      rightsum-=A[i];
+      if(leftsum==rightsum)
+      {
           return i;
-     }
-   s+=A[i];
+      }
+      leftsum+=A[i];
+      
   }
   return -1;
 }
