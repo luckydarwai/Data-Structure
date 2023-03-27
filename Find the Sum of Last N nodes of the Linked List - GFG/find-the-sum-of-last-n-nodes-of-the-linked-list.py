@@ -15,7 +15,7 @@ def sumOfLastN_Nodes(head,n):
         lis.append(head.data)
         head=head.next
     lis.reverse()
-    return sum(lis[:n])
+    return sum(lis[:n:1])
 
 
 #{ 
